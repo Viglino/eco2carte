@@ -46,6 +46,7 @@ function getColor(color, opacity) {
   }
 };
 function style2IgnStyle(style) {
+  if (!style) return {};
   const fillColor = getColor(style.fillColor, style.fillOpacity);
   const strokeColor = getColor(style.strokeColor, style.strokeOpacity);
   return {
@@ -61,7 +62,7 @@ function setStyle(nStyle) {
   if (!vector.get('styles')) return false;
   var style = vector.get('styles')[nStyle||0];
   const defaultStyle = style2IgnStyle(style);
-  if (style.children) {
+  if (style && style.children) {
     vector.getSource().getFeatures().forEach((f) => {
       f.setIgnStyle(defaultStyle);
       style.children.forEach((st) => {
