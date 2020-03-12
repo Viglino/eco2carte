@@ -1,0 +1,22 @@
+#menu .guichet form {
+  max-height: 80%;
+}
+#menu .guichet ul {
+  list-style: none;
+  padding: 0;
+  border: 2px solid #ccc;
+  height: 10em;
+  overflow-x: hidden;
+  overflow-y: auto;
+} 
+#menu .guichet ul li {
+  white-space: nowrap;
+  padding: 0 .5em;
+  overflow: hidden;
+  cursor: pointer;
+}
+#menu .guichet ul li:hover {
+  color: #fff;
+  background-color: #19f;
+}
+

@@ -1,0 +1,55 @@
+<div class="back menu"></div>
+
+<ul class="menu">
+  <li data-page="upload">
+    <i class="fa fa-cloud-upload"></i> 
+    <span>
+      Charger des Signalements
+    </span>
+  </li>
+  <li data-page="guichet">
+    <i class="fa fa-cloud-upload"></i> 
+    <span>
+      Charger un guichet
+    </span>
+  </li>
+  <li class="download">
+    <i class="fa fa-map"></i> 
+    <span>
+      Charger Ma carte
+    </span>
+  </li>
+  <li data-page="about">
+    <i class="fa fa-question-circle"></i> 
+    <span>
+      A propos...
+    </span>
+  </li>
+</ul>
+
+<div class="page about">
+  <h1>A propos...</h1>
+</div>
+<div class="page dialog">
+  <div class="wait">
+    <i class="fa fa-spinner fa-pulse"></i>
+  </div>
+</div>
+<div class="page dialog upload">
+  <h1>Charger des signalemnets...</h1>
+</div>
+<div class="page dialog guichet">
+  <h1>Charger un guichet...</h1>
+</div>
+<div class="page dialog message">
+</div>
+<div class="page dialog info">
+  <h1></h1>
+  <form>
+    <div>
+      <i class="fa fa-times" onclick="$('#menu .page.info').removeClass('active');"></i>
+      <span class='nb'></span> objet(s) chargés(s)...
+    </div>
+  </form>
+</div>
+  

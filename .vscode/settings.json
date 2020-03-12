@@ -1,0 +1,12 @@
+{
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "www": true,
+    ".dist": true,
+    ".cache": true,
+    ".git": true,
+    "build": true,
+    "node_modules": true
+  },
+  "search.useIgnoreFiles": false
+}
