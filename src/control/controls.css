@@ -19,3 +19,7 @@
   background-color: #fff;
   min-width: 100%;
 }
+
+.ol-control.paint {
+  top: 9em;
+}

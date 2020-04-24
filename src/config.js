@@ -5,6 +5,9 @@ const config = {
   ignStyle: { 
 	  "default":{
 			"default": { pointGlyph: "", pointForm: "marker", pointRadius: 15, symbolColor: "rgba(0,0,255,1)", pointColor: "rgba(0,0,255,1)", pointStrokeColor: "rgba(255,255,255,1)"},
+			"circle": {"pointGlyph":"","pointForm":"circle","pointRadius":8,"symbolColor":"rgb(103, 78, 167)","pointColor":"rgba(0,0,255,1)","pointStrokeColor":"rgba(255,255,255,1)"},
+			"orange": {"pointGlyph":"","pointForm":"circle","pointRadius":8,"symbolColor":"rgb(224, 102, 102)","pointColor":"rgba(0,0,255,1)","pointStrokeColor":"rgba(255,255,255,1)"},
+			"square": {"pointGlyph":"","pointForm":"square","pointRadius":8,"symbolColor":"rgb(74, 134, 232)","pointColor":"rgba(0,0,255,1)","pointStrokeColor":"rgba(255,255,255,1)"},
 
 			"Indifférencié": { pointGlyph: "ign-tourisme-gite", "pointForm":"marker","pointRadius":15,"symbolColor":"rgb(255, 255, 255)","pointColor":"rgb(103, 78, 167)","pointStrokeColor":"rgba(255,255,255,1)"},
 			"Agricole": { pointGlyph: "ign-panneau-tracteur", "pointForm":"marker","pointRadius":15,"symbolColor":"rgb(255, 255, 255)","pointColor":"rgb(103, 78, 167)","pointStrokeColor":"rgba(255,255,255,1)"},

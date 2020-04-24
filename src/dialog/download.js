@@ -22,7 +22,7 @@ function download () {
 `(([**#%id%**](https://espacecollaboratif.ign.fr/georem/%id%)
 ))((%commune% (%id_dep%)
 ))((%comment%))((
-!(https://espacecollaboratif.ign.fr/document/thumbnail/%doc%) ))
+!(https://espacecollaboratif.ign.fr/document/image/%doc%) ))
 ((par [%auteur%](https://espacecollaboratif.ign.fr/user/%id_auteur%)))((
 le %date%))((
 hauteur: %hauteur% m))`
