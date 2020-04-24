@@ -27,6 +27,8 @@ function download () {
 le %date%))((
 hauteur: %hauteur% m))`
     };
+    layer.cluster = true;
+    layer.maxZoomCluster = "13";
   } else {
     let valdef = storage.load();
     console.log(valdef)
