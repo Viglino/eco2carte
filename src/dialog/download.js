@@ -38,13 +38,25 @@ hauteur: %hauteur% m))`
     }
   }
   
+  function roundCoord(geom) {
+    geom.forEach((g) => {
+      if (typeof(g[0]) === 'number') {
+        g[0] = Math.round(g[0]*100)/100;
+        g[1] = Math.round(g[1]*100)/100;
+      } else {
+        roundCoord(g);
+      }
+    });
+    return geom;
+  }
+
   const features = vector.getSource().getFeatures();
   features.forEach((feature) => {
     const f = {
       attributes: feature.getProperties(),
       type: feature.getGeometry().getType(),
       style: feature.getIgnStyle(),
-      coords: feature.getGeometry().getCoordinates(), 
+      coords: roundCoord( feature.getGeometry().getCoordinates() ), 
       popupcontent: {"active":false,"title":"","desc":"","img":"","coord":false}
     }
     delete (f.attributes.geometry);
@@ -53,7 +65,7 @@ hauteur: %hauteur% m))`
 
   // Export
   FileSaver.saveAs(
-    new Blob([JSON.stringify(macarte, null,'  ')],
+    new Blob([JSON.stringify(macarte)],
     {type:"text/plain;charset=utf-8"}),
     map.get('type')+'.carte'
   );
