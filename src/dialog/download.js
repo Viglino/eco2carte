@@ -5,7 +5,6 @@ import emptymap from './emptymap'
 import FileSaver from 'file-saver'
 import Button from 'ol-ext/control/Button'
 import storage from './storage'
-import { forEachCorner } from 'ol/extent'
 
 // Download map
 function download () {
@@ -31,22 +30,24 @@ hauteur: %hauteur% m))`
     layer.maxZoomCluster = "13";
   } else {
     let valdef = storage.load();
-    console.log(valdef)
     if (valdef.infobulle) layer.popupContent = {
       "titre": "((%groupe%))",
       "desc": valdef.infobulle
     }
   }
   
+  // Arrondir les coordonnees a 2 chiffres
   function roundCoord(geom) {
-    geom.forEach((g) => {
-      if (typeof(g[0]) === 'number') {
-        g[0] = Math.round(g[0]*100)/100;
-        g[1] = Math.round(g[1]*100)/100;
+    if (geom.length) {
+      if (typeof(geom[0]) === 'number') {
+        geom[0] = Math.round(geom[0]*100)/100;
+        geom[1] = Math.round(geom[1]*100)/100;
       } else {
-        roundCoord(g);
+        geom.forEach((g) => {
+          roundCoord(g);
+        });
       }
-    });
+    }
     return geom;
   }
 

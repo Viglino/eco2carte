@@ -138,6 +138,12 @@ form.on('submit', function(e) {
 const uload = new Button ({
   className: 'upload',
   html: '<i class="fa fa-cloud-upload"></i>',
-  handleClick: () => page.show('upload')
+  handleClick: () => {
+    page.show('upload');
+    setTimeout(() => {
+      if (!$('.login', form).val()) $('.login', form).focus();
+      else $('.pwd', form).focus();
+    },100)
+  }
 });
 map.addControl(uload);
