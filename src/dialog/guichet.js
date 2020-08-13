@@ -103,8 +103,12 @@ function loadData (ftype, login, pwd, world) {
       bbox: bbox.join(',')
     },
     dataType: 'json', 
+    // Bug with user/pwd in Android 4.1
+    beforeSend: function(xhr){ xhr.setRequestHeader("Authorization", "Basic " + btoa(login + ":" + pwd)); },
+/*
     username: login,
     password: pwd,
+*/
     success: function (data) {
       const format = new WKT();
       const r3d = /([-+]?(\d*[.])?\d+) ([-+]?(\d*[.])?\d+) ([-+]?(\d*[.])?\d+)/g;
@@ -149,8 +153,12 @@ function loadGuichet(layer, login, pwd, world) {
   $.ajax({
     url: url,
     dataType: 'json', 
+    // Bug with user/pwd in Android 4.1
+    beforeSend: function(xhr){ xhr.setRequestHeader("Authorization", "Basic " + btoa(login + ":" + pwd)); },
+/*
     username: login,
     password: pwd,
+*/
     success: function (featureType) {
       loadData(featureType, login, pwd, world);
     },
