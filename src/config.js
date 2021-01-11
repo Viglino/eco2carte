@@ -1,6 +1,6 @@
 const config = {
   "title": "Eco2Carte",
-  "apiKey": "pratique",
+  "apiKey": "choisirgeoportail",
   // Attributes / style
   ignStyle: { 
 	  "default":{
