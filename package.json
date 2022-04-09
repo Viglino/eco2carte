@@ -25,7 +25,7 @@
     "file-saver": "^2.0.0-rc.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "mongo-parse": "^2.1.0",
     "ol": "^5.1.3",
     "ol-ext": "^3.0.2",
